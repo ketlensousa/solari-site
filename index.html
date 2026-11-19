@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solari DP · Departamento Pessoal</title>
+<meta name="description" content="Assessoria de Departamento Pessoal e eSocial em Rio Verde/GO, Brasília/DF e todo o Brasil: folha de pagamento, ponto eletrônico, admissões, rescisões, férias, FGTS Digital e convenção coletiva.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Solari DP · Gestão Trabalhista","description":"Assessoria de Departamento Pessoal e eSocial","areaServed":["Rio Verde, GO","Brasília, DF","Brasil"],"telephone":"+55 61 99151-4698","email":"solaridp13@gmail.com","sameAs":["https://www.instagram.com/solaridp/"]}</script>
+<style>
+/* VOICE: assessoria séria e próxima, para o dono de empresa que não quer dor de cabeça
+   IDEA: o fechamento do mês de DP, tudo conferido e marcado
+   PICTURE: painel do mês com a checagem da competência e o sol raiado da marca
+   COLOUR and TYPE: slate #1E1B2E dominante, violeta #7C5CBF apoio, rosé #E05573 acento; Outfit + DM Sans
+   LAYOUT: barra flutuante, herói escuro, faixa de clientes clara, bandas alternadas até o rodapé */
+:root{color-scheme:light;--ink:#1E1B2E;--ink2:#4A4560;--mut:#6B6585;--vi:#7C5CBF;--vi2:#C9B6EE;--ro:#E05573;--ro2:#C43D5E;--bg:#FFFFFF;--bone:#F7F5FA;--line:#E8E3F0;--dk:#1E1B2E;--dk2:#29233D}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Outfit,system-ui,sans-serif;margin:0;text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(5vw,18px)}
+.band{padding:clamp(56px,8vw,104px) 0}
+.dark{background:var(--dk);color:#fff}
+.boneb{background:var(--bone)}
+.k{font-size:14px;font-weight:600;color:var(--vi);margin-bottom:12px}
+.dark .k{color:var(--vi2)}
+h2{font-size:clamp(28px,3.6vw,42px);line-height:1.1;font-weight:700;max-width:22ch}
+.lead{font-size:17px;color:var(--ink2);max-width:60ch;margin:16px 0 0}
+.dark .lead{color:#CFC6E6}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:600 15px Outfit,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--vi2);outline-offset:3px}
+.bp{background:var(--ro);color:#fff}
+.bg{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.bl{background:var(--ink);color:#fff}
+/* nav */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:50}
+.nav .in{max-width:1180px;margin:0 auto;padding:0 max(3vw,12px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(30,27,46,.86);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:8px 8px 8px 20px;color:#fff}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:700 21px Outfit,sans-serif}.logo b span{color:var(--ro);margin-left:4px}
+.logo small{display:block;font-size:11px;color:#CFC6E6;line-height:1.1}
+.links{display:flex;gap:26px;font-size:14px}
+.links a{text-decoration:none;color:#E5DFF3}.links a:hover{color:#fff}
+@media(max-width:900px){.links{display:none}.logo small{display:none}}
+/* hero */
+.hero{position:relative;background:var(--dk);color:#fff;padding:150px 0 90px;overflow:hidden}
+.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 10%,rgba(224,85,115,.22),transparent 40%),radial-gradient(circle at 0% 100%,rgba(124,92,191,.35),transparent 45%)}
+.hg{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.05;font-weight:700}
+.hero p{font-size:18px;color:#D6CFE8;max-width:46ch;margin:22px 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.trust{margin-top:34px;font-size:14px;color:#B9B0D0}
+.panel{background:linear-gradient(160deg,#2B2442,#221D35);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
+.ph{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#B9B0D0}
+.tag{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:3px 10px;font-size:12px}
+.pt{font:600 22px Outfit,sans-serif;margin:14px 0 4px}
+.row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}
+.row:last-of-type{border:0}
+.ok{flex:none;width:24px;height:24px;border-radius:50%;background:rgba(124,92,191,.25);display:grid;place-items:center}
+.ok svg{width:13px;height:13px}
+.row em{margin-left:auto;font-style:normal;font-size:13px;color:#B9B0D0;white-space:nowrap}
+.meter{height:8px;border-radius:9px;background:rgba(255,255,255,.1);margin-top:18px;overflow:hidden}
+.meter i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--vi),var(--ro));animation:fill 1.6s ease-out}
+@keyframes fill{from{width:0}}
+@media(prefers-reduced-motion:reduce){.meter i{animation:none}.btn{transition:none}}
+.pf{display:flex;justify-content:space-between;font-size:13px;color:#B9B0D0;margin-top:8px}
+@media(max-width:860px){.hg{grid-template-columns:1fr;gap:40px}.hero{padding-top:120px}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:44px}
+.st b{display:block;font:700 clamp(34px,4vw,48px)/1 Outfit,sans-serif;color:var(--vi)}
+.st{border-top:2px solid var(--line);padding-top:18px}.st span{display:block;margin-top:8px;color:var(--ink2);font-size:15px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* services */
+.sv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s}
+.card:hover{border-color:var(--vi2);box-shadow:0 18px 40px -24px rgba(124,92,191,.45)}
+.ic{width:42px;height:42px;border-radius:12px;background:#F1ECFA;display:grid;place-items:center;margin-bottom:16px}
+.ic svg{width:21px;height:21px;stroke:var(--vi);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:18px;font-weight:600;margin-bottom:6px}
+.card p{margin:0;font-size:15px;color:var(--ink2);line-height:1.5}
+.note{margin-top:22px;font-size:14px;color:var(--mut)}
+@media(max-width:1000px){.sv{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.sv{grid-template-columns:1fr}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:48px;position:relative}
+.steps:before{content:'';position:absolute;top:22px;left:22px;right:22px;height:1px;background:rgba(255,255,255,.16)}
+.s{position:relative}
+.s i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--vi);font:600 16px Outfit,sans-serif;font-style:normal;margin-bottom:18px}
+.s h3{font-size:19px;font-weight:600;margin-bottom:6px}
+.s p{margin:0;color:#CFC6E6;font-size:15px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}.steps:before{display:none}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+/* quiz */
+.qz{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.qbox{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 24px 50px -30px rgba(30,27,46,.35)}
+.qn{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
+.qbar{height:6px;background:var(--bone);border-radius:9px;margin:10px 0 22px;overflow:hidden}.qbar i{display:block;height:100%;background:var(--vi);transition:width .3s}
+.qq{font:600 21px/1.3 Outfit,sans-serif;margin-bottom:20px}
+.opts{display:grid;gap:10px}
+.opt{min-height:52px;text-align:left;padding:12px 18px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 16px 'DM Sans',sans-serif;color:var(--ink);cursor:pointer}
+.opt:hover{border-color:var(--vi);background:#FAF8FD}
+.res h3{font-size:24px;margin:6px 0 10px}
+.res ul{margin:12px 0 22px;padding-left:20px;color:var(--ink2)}
+.lvl{display:inline-block;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.back{background:none;border:0;color:var(--mut);font:500 14px 'DM Sans';cursor:pointer;margin-top:16px;min-height:44px}
+@media(max-width:860px){.qz{grid-template-columns:1fr}}
+/* about */
+.ab{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.sunbox{aspect-ratio:1;border-radius:28px;background:var(--dk);display:grid;place-items:center;position:relative;overflow:hidden}
+.sunbox:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(224,85,115,.25),transparent 55%)}
+.sunbox svg{width:58%;position:relative}
+.sunbox p{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#CFC6E6;font-size:14px;margin:0}
+.pts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.pts div{border-top:2px solid var(--line);padding-top:12px;font-size:15px;color:var(--ink2)}
+.pts b{display:block;color:var(--ink);font:600 16px Outfit,sans-serif;margin-bottom:2px}
+@media(max-width:860px){.ab{grid-template-columns:1fr}.sunbox{max-width:380px}}
+/* segments */
+.seg{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.seg span{padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:15px}
+/* faq */
+.fq{max-width:820px;margin-top:36px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:60px;font:600 18px Outfit,sans-serif}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';font-size:26px;color:var(--vi);transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:var(--ink2);max-width:68ch}
+/* final */
+.fin{text-align:center}
+.fin h2{margin:0 auto;max-width:20ch}
+.fin .lead{margin:16px auto 30px}
+.fin .cta{justify-content:center}
+footer{background:#15131F;color:#B9B0D0;padding:56px 0 30px;font-size:15px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer h4{font:600 15px Outfit,sans-serif;color:#fff;margin:0 0 12px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.copy{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:22px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:760px){.fg{grid-template-columns:1fr}}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4)}
+.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="in"><div class="bar">
+  <a class="logo" href="#topo"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(0 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(30 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(60 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(90 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(120 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(150 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(180 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(210 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(240 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(270 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(300 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(330 50 50)"/><circle cx="50" cy="50" r="13" fill="#E05573"/></svg><span><b>Solari<span>DP</span></b><small>Gestão Trabalhista &amp; Departamento Pessoal</small></span></a>
+  <nav class="links"><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#diagnostico">Diagnóstico</a><a href="#sobre">Sobre</a><a href="#faq">Dúvidas</a></nav>
+  <a class="btn bp" href="https://wa.me/5561991514698?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Solari%20DP%20e%20quero%20saber%20mais%20sobre%20a%20assessoria." target="_blank" rel="noopener">Falar com especialista</a>
+</div></div></div>
+
+<header class="hero" id="topo"><div class="wrap hg">
+  <div>
+    <div class="k">Departamento Pessoal e eSocial · Goiás, Distrito Federal e todo o Brasil</div>
+    <h1>Sua equipe em dia com a lei, e você livre da burocracia.</h1>
+    <p>A Solari DP assume toda a rotina dos seus funcionários: admissão, ponto, folha, férias e rescisão, sempre de acordo com a CLT, a convenção coletiva e o eSocial.</p>
+    <div class="cta"><a class="btn bp" href="#diagnostico">Fazer diagnóstico gratuito</a><a class="btn bg" href="https://wa.me/5561991514698?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Solari%20DP%20e%20quero%20saber%20mais%20sobre%20a%20assessoria." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+    <div class="trust">Especialistas em DP e eSocial há 8 anos.</div>
+  </div>
+  <div class="panel" aria-label="Exemplo de fechamento mensal">
+    <div class="ph"><span>Fechamento do mês</span><span class="tag">Exemplo</span></div>
+    <div class="pt">Competência 11/2026</div>
+    <div id="chk"></div>
+    <div class="meter"><i></i></div>
+    <div class="pf"><span>Rotina concluída</span><span>100%</span></div>
+  </div>
+</div></header>
+
+<section class="band boneb stb" style="padding-top:72px;padding-bottom:72px"><div class="wrap">
+  <div class="k">Resultados que falam por nós</div>
+  <h2>Experiência de quem vive a rotina de DP todos os dias.</h2>
+  <div class="stats">
+    <div class="st"><b>8 anos</b><span>em Departamento Pessoal e eSocial</span></div>
+    <div class="st"><b>13</b><span>empresas e unidades atendidas</span></div>
+    <div class="st"><b>4 estados</b><span>com clientes ativos: DF, GO, SP e SC</span></div>
+    <div class="st"><b>100%</b><span>digital, de qualquer cidade</span></div>
+  </div>
+</div></section>
+
+<section class="band" id="servicos"><div class="wrap">
+  <div class="k">Como podemos ajudar</div>
+  <h2>Toda a rotina de pessoal, num só lugar.</h2>
+  <p class="lead">Do primeiro dia do colaborador ao último, a Solari cuida de cada etapa com conferência e prazo.</p>
+  <div class="sv" id="sv"></div>
+  <p class="note">Recrutamento e seleção, exames ocupacionais e a parte fiscal e contábil não fazem parte da assessoria. A Solari orienta a empresa e trabalha junto com a sua contabilidade.</p>
+</div></section>
+
+<section class="band dark" id="como"><div class="wrap">
+  <div class="k">Como funciona</div>
+  <h2>Simples para você, completo por trás.</h2>
+  <div class="steps">
+    <div class="s"><i>1</i><h3>Diagnóstico</h3><p>Entendemos sua equipe, contratos, escalas e a convenção coletiva da sua cidade.</p></div>
+    <div class="s"><i>2</i><h3>Implantação</h3><p>Organizamos cadastros, ponto eletrônico e documentos. Você não precisa parar a operação.</p></div>
+    <div class="s"><i>3</i><h3>Rotina mensal</h3><p>Ponto tratado, folha conferida e contracheques prontos até o 5º dia útil.</p></div>
+    <div class="s"><i>4</i><h3>Tranquilidade</h3><p>eSocial, FGTS Digital e INSS no prazo, com atendimento direto quando surgir dúvida.</p></div>
+  </div>
+</div></section>
+
+<section class="band boneb" id="diagnostico"><div class="wrap qz">
+  <div>
+    <div class="k">Diagnóstico trabalhista</div>
+    <h2>Descubra em 1 minuto se o seu DP está em risco.</h2>
+    <p class="lead">Responda 4 perguntas rápidas e veja onde a sua empresa pode estar exposta a multas e processos trabalhistas.</p>
+  </div>
+  <div class="qbox" id="quiz" aria-live="polite"></div>
+</div></section>
+
+<section class="band" id="sobre"><div class="wrap ab">
+  <div class="sunbox"><svg width="200" height="200" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(0 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(30 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(60 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(90 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(120 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(150 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(180 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(210 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(240 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(270 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(300 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(330 50 50)"/><circle cx="50" cy="50" r="13" fill="#E05573"/></svg><p>Solari DP · Gestão Trabalhista</p></div>
+  <div>
+    <div class="k">Quem cuida da sua equipe</div>
+    <h2>Departamento Pessoal feito por especialista, não por sistema.</h2>
+    <p class="lead">A Solari DP foi criada por Ketlen Sousa, especialista em Departamento Pessoal e eSocial, com experiência em varejo, academias, contabilidade e serviços. A ideia é simples: o empresário merece um DP que confere tudo, explica sem enrolação e resolve antes do problema aparecer.</p>
+    <div class="pts">
+      <div><b>Atendimento direto</b>Você fala com quem faz a sua folha.</div>
+      <div><b>Convenção aplicada</b>Piso, reajustes e regras da sua categoria e cidade.</div>
+      <div><b>Conferência em cada etapa</b>Nada é enviado sem checagem.</div>
+      <div><b>Parceria com a contabilidade</b>Trabalhamos junto com o seu contador.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band boneb"><div class="wrap">
+  <div class="k">Segmentos atendidos</div>
+  <h2>Experiência em negócios como o seu.</h2>
+  <div class="seg"><span>Academias</span><span>Lojas e varejo</span><span>Moda</span><span>Óticas</span><span>Escritórios de contabilidade</span><span>Eventos</span><span>Saúde e estética</span><span>Automóveis</span><span>Negócios digitais</span></div>
+</div></section>
+
+<section class="band" id="faq"><div class="wrap">
+  <div class="k">Perguntas frequentes</div>
+  <h2>Tirando suas dúvidas antes da conversa.</h2>
+  <div class="fq" id="fq"></div>
+</div></section>
+
+<section class="band dark fin"><div class="wrap">
+  <div class="k">Próximo passo</div>
+  <h2>Vamos colocar o DP da sua empresa em ordem?</h2>
+  <p class="lead">Faça o diagnóstico gratuito ou fale agora com uma especialista. Sem compromisso.</p>
+  <div class="cta"><a class="btn bp" href="https://wa.me/5561991514698?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Solari%20DP%20e%20quero%20saber%20mais%20sobre%20a%20assessoria." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn bg" href="#diagnostico">Fazer diagnóstico</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><a class="logo" href="#topo"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(0 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(30 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(60 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(90 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(120 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(150 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(180 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(210 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(240 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(270 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(300 50 50)"/><polygon points="50,6 52.2,30 47.8,30" fill="#C9B6EE" transform="rotate(330 50 50)"/><circle cx="50" cy="50" r="13" fill="#E05573"/></svg><span><b style="color:#fff">Solari<span>DP</span></b></span></a><p style="margin:14px 0 0;max-width:36ch">Assessoria de Departamento Pessoal e gestão trabalhista para empresas com funcionários CLT.</p></div>
+    <div><h4>Serviços</h4><ul><li><a href="#servicos">Folha de pagamento</a></li><li><a href="#servicos">Ponto eletrônico</a></li><li><a href="#servicos">Admissões e rescisões</a></li><li><a href="#servicos">eSocial e FGTS Digital</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li><a href="https://wa.me/5561991514698?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Solari%20DP%20e%20quero%20saber%20mais%20sobre%20a%20assessoria." target="_blank" rel="noopener">WhatsApp (61) 99151-4698</a></li><li>solaridp13@gmail.com</li><li><a href="https://www.instagram.com/solaridp/" target="_blank" rel="noopener">@solaridp</a></li></ul></div>
+  </div>
+  <div class="copy"><span>© 2026 Solari DP · Gestão Trabalhista</span><span>Rio Verde/GO · Brasília/DF · Atendimento em todo o Brasil</span></div>
+</div></footer>
+
+<a class="wa" href="https://wa.me/5561991514698?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Solari%20DP%20e%20quero%20saber%20mais%20sobre%20a%20assessoria." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg></a>
+
+<script>
+{
+const WA='https://wa.me/5561991514698';
+
+
+const ck=['Ponto tratado e fechado','Folha conferida','Contracheques disponíveis','eSocial transmitido','FGTS Digital e INSS recolhidos'];
+const em=['dia 26','dia 28','5º dia útil','no prazo','dia 20'];
+const tick='<svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="#C9B6EE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+document.getElementById('chk').innerHTML=ck.map((t,i)=>`<div class="row"><span class="ok">${tick}</span>${t}<em>${em[i]}</em></div>`).join('');
+
+const I={
+ doc:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ money:'<rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v.01M18 15v.01"/>',
+ sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+ out:'<path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/>',
+ cloud:'<path d="M7 18a4 4 0 0 1-.6-8 6 6 0 0 1 11.5 1.5A3.5 3.5 0 0 1 17.5 18z"/><path d="M12 12v5M9.5 14.5 12 17l2.5-2.5"/>',
+ scale:'<path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/>',
+ shield:'<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>'
+};
+const sv=[
+ ['doc','Admissão e contratos','Documentos, contrato de trabalho e de experiência, termos e envio ao eSocial no prazo.'],
+ ['clock','Ponto eletrônico','Implantação do sistema, cadastro de escalas e tratamento mensal das marcações.'],
+ ['money','Folha de pagamento','Salários, comissões, horas extras, adicionais e descontos, conferidos antes do pagamento.'],
+ ['sun','Férias, 13º e afastamentos','Programação e cálculo de férias e 13º, atestados, licenças e afastamentos.'],
+ ['out','Rescisões','Cálculo de todas as modalidades, TRCT, guias e baixa no eSocial, com orientação prévia.'],
+ ['cloud','eSocial e FGTS Digital','Eventos do eSocial, guias do FGTS Digital e apoio à contabilidade na DCTFWeb.'],
+ ['scale','Convenção coletiva','Piso, reajustes, domingos e feriados e demais cláusulas da sua categoria.'],
+ ['shield','Compliance trabalhista','Políticas internas, advertências, regimento e orientação à gestão.']
+];
+document.getElementById('sv').innerHTML=sv.map(s=>`<div class="card"><div class="ic"><svg viewBox="0 0 24 24">${I[s[0]]}</svg></div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('');
+
+const fq=[
+ ['Atendem empresas de outras cidades?','Sim. O atendimento é 100% digital, então a Solari atende empresas em Rio Verde, Brasília e em qualquer cidade do Brasil, sempre aplicando a convenção coletiva do local.'],
+ ['Preciso trocar de contabilidade?','Não. A Solari cuida do Departamento Pessoal e trabalha junto com o contador que você já tem, enviando o que ele precisa para a parte fiscal e contábil.'],
+ ['Como funciona a troca do DP atual para a Solari?','Fazemos um levantamento dos colaboradores, contratos e históricos, organizamos o que for preciso e assumimos a partir da competência seguinte, sem parar a sua operação.'],
+ ['A Solari cuida do ponto eletrônico?','Sim. O sistema é contratado em nome da empresa e a Solari implanta, cadastra as escalas e trata as marcações todo mês antes de fechar a folha.'],
+ ['Vocês fazem recrutamento e seleção?','Não. A escolha do candidato fica com a empresa. A partir daí a Solari assume toda a admissão, da documentação ao envio ao eSocial.'],
+ ['Quanto custa a assessoria?','O valor depende do número de colaboradores e da rotina da empresa. Faça o diagnóstico ou chame no WhatsApp para receber uma proposta personalizada.']
+];
+document.getElementById('fq').innerHTML=fq.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+
+const Q=[
+ ['Quantos funcionários CLT a sua empresa tem?',[['De 1 a 5',0],['De 6 a 20',1],['Mais de 20',2]],null],
+ ['A folha aplica o piso e as regras da convenção coletiva da sua categoria?',[['Sim, com certeza',0],['Não sei dizer',2],['Não',3]],'Convenção coletiva sem conferência: piso, reajuste ou domingos podem estar errados.'],
+ ['O ponto dos funcionários é conferido todo mês antes de fechar a folha?',[['Sim',0],['Às vezes',2],['Não temos ponto',3]],'Ponto sem tratamento mensal: horas extras e faltas podem gerar passivo.'],
+ ['O eSocial e o FGTS Digital estão sem pendências?',[['Sim, tudo em dia',0],['Não sei',2],['Tem pendência',3]],'eSocial ou FGTS com pendências: risco de multa e de problema nas guias.']
+];
+let step=0,score=0,flags=[];
+const box=document.getElementById('quiz');
+function render(){
+ if(step<Q.length){
+  const q=Q[step];
+  box.innerHTML=`<div class="qn"><span>Pergunta ${step+1} de ${Q.length}</span><span>${Math.round(step/Q.length*100)}%</span></div><div class="qbar"><i style="width:${step/Q.length*100}%"></i></div><div class="qq">${q[0]}</div><div class="opts">${q[1].map((o,i)=>`<button class="opt" data-i="${i}">${o[0]}</button>`).join('')}</div>${step?'<button class="back" id="bk">Voltar</button>':''}`;
+  return;
+ }
+ const lv=score>=6?['Risco alto','#FDE8EC','#C43D5E','Há pontos que podem gerar multas e processos. Vale revisar o quanto antes.']:score>=3?['Atenção','#FFF4E0','#9A5B00','Alguns pontos merecem uma revisão para evitar surpresas.']:['Risco baixo','#ECF7EE','#2E7D45','Seu DP parece organizado. Uma conferência periódica mantém tudo assim.'];
+ const msg=encodeURIComponent('Olá! Fiz o diagnóstico no site da Solari DP e o resultado foi: '+lv[0]+'. Quero entender melhor.');
+ box.innerHTML=`<div class="res"><span class="lvl" style="background:${lv[1]};color:${lv[2]}">${lv[0]}</span><h3>${lv[3]}</h3>${flags.length?'<ul>'+flags.map(f=>`<li>${f}</li>`).join('')+'</ul>':'<p style="color:var(--ink2)">Nenhum ponto crítico nas respostas.</p>'}<a class="btn bl" href="${WA}?text=${msg}" target="_blank" rel="noopener">Receber análise no WhatsApp</a><br><button class="back" id="re">Refazer diagnóstico</button></div>`;
+}
+const hist=[];
+box.addEventListener('click',e=>{
+ const o=e.target.closest('.opt');
+ if(o){const q=Q[step],v=q[1][+o.dataset.i][1];hist.push([v,v>=2&&q[2]?q[2]:null]);score+=v;if(v>=2&&q[2])flags.push(q[2]);step++;render();return}
+ if(e.target.id==='bk'&&hist.length){const [v,f]=hist.pop();score-=v;if(f)flags.pop();step--;render();return}
+ if(e.target.id==='re'){step=0;score=0;flags=[];hist.length=0;render()}
+});
+render();
+}
+</script>
+</body>
+</html>
